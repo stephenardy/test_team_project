@@ -12,7 +12,12 @@
   {% for note in user.notes%}
   <li class="list-group-item">
     {{ note.data }}
-    <button type="submit" class="btn-close" aria-label="Close"></button>
+    <button
+      type="submit"
+      class="btn-close"
+      aria-label="Close"
+      onclick="deleteNote({{ note.id }})"
+    ></button>
   </li>
   {% endfor %}
 </ul>
